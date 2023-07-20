@@ -13,7 +13,7 @@ const Blog = () => {
 		});
 	
 	}, []);
-	console.log(pDeatils);
+	console.log(url);
 	return (
 		<div className='container'>
 			{pDeatils.title.rendered}
