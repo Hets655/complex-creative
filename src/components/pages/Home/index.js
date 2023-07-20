@@ -19,13 +19,12 @@ const Home = () => {
 		});
 		
 	}, []);
-	console.log(pages);
+	
 	return (
 		<div className="container">
 			{
 				pages.map((page,index)=>(
 					<div className="homepageloop" key={index}>
-						{page}
 						<div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
 							<img
 								src={page._embedded['wp:featuredmedia'][0].source_url}
@@ -59,7 +58,7 @@ const Home = () => {
 						</div>
 						<div className="space-y-12 py-10 pl-10 pr-10">
 							<div className="border-b border-gray-900/10 pb-12">
-								 <p dangerouslySetInnerHTML={{__html: page.content.rendered}}></p>
+									<p dangerouslySetInnerHTML={{__html: page.content.rendered}}></p>
 							</div>
 						</div>
 					</div>
@@ -88,8 +87,6 @@ const Home = () => {
 									More info
 								</Link>
 							</div>
-							
-							
 						</div>
 					))
 				}
