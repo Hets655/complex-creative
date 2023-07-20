@@ -3,22 +3,22 @@ import { useParams } from "react-router-dom";
 import Axios from 'axios';
 
 const Blog = () => {
-	let { PId } = useParams();
-	const [pDeatils, setpDeatils] = useState([]);
-	let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts/' + PId  + '?_embed';
+	let { pID } = useParams();
+	const [Pdeatils, setPdeatils] = useState([]);
+	let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts/25?_embed';
 	useEffect(()=>{
 		
 		Axios.get(url).then((res)=>{
-			setpDeatils(res.data)
-			console.log('inside	', res.data)
+			setPdeatils(res.data)
+			console.log('inside', res.data)
 		});
 	
 	}, []);
 	console.log(url);
-	console.log(pDeatils);
+	console.log(Pdeatils);
 	return (
 		<div className='container'>
-			{pDeatils.title.rendered}
+			{Pdeatils.title.rendered}
 		</div>
 	)
 }
