@@ -19,13 +19,14 @@ const Home = () => {
 		});
 		
 	}, []);
-	
+	console.log(pages);
 	return (
 		<div className="container">
 			Hello
 			{
 				pages.map((page,index)=>(
 					<div className="homepageloop" key={index}>
+						{page}
 						<div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
 							<img
 								src={page._embedded['wp:featuredmedia'][0].source_url}
