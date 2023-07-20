@@ -5,9 +5,9 @@ import Axios from 'axios';
 const Blog = () => {
 	let { pID } = useParams();
 	const [pDeatils, setpDeatils] = useState([]);
-	
+	let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts/' + pID  + '?_embed';
 	useEffect(()=>{
-		let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts/' + pID  + '?_embed';
+		
 		Axios.get(url).then((res)=>{
 			setpDeatils(res.data)
 		});
