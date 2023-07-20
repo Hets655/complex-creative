@@ -7,12 +7,12 @@ const Home = () => {
 	const [posts, setPosts] = useState([]);
 	
 	useEffect(()=>{
-		let url = 'http://siteproofs.com/projects/hetal/wp/wp-json/wp/v2/pages?_embed';
+		let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/pages?_embed';
 		Axios.get(url).then((res)=>{
 			setPages(res.data);
 		});
 
-		let url2 = 'http://siteproofs.com/projects/hetal/wp/wp-json/wp/v2/posts?_embed&per_page=2&offset=2';
+		let url2 = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts?_embed&per_page=2&offset=2';
 		Axios.get(url2).then((res)=>{
 			setPosts(res.data);
 		});
