@@ -10,10 +10,12 @@ const Blog = () => {
 		
 		Axios.get(url).then((res)=>{
 			setpDeatils(res.data)
+			console.log('inside	', res.data)
 		});
 	
 	}, []);
 	console.log(url);
+	console.log(pDeatils);
 	return (
 		<div className='container'>
 			{pDeatils.title.rendered}
