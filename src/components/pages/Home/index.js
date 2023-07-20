@@ -22,7 +22,6 @@ const Home = () => {
 	console.log(pages);
 	return (
 		<div className="container">
-			Hello
 			{
 				pages.map((page,index)=>(
 					<div className="homepageloop" key={index}>
