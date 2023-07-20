@@ -12,9 +12,9 @@ const Blog = () => {
 			setPdeatils(res.data)
 			console.log('inside', res.data)
 		});
-	
+		console.log(url);
 	}, []);
-	console.log(url);
+	
 	console.log(Pdeatils);
 	return (
 		<div className='container'>
