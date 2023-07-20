@@ -7,17 +7,15 @@ const Blog = () => {
 	const [pDeatils, setpDeatils] = useState([]);
 	
 	useEffect(()=>{
-		console.log(pDeatils);
-		let url = 'http://siteproofs.com/projects/hetal/wp/wp-json/wp/v2/posts/' + pID;
-		Axios.get(`http://siteproofs.com/projects/hetal/wp/wp-json/wp/v2/posts/`  + {pID}).then((res)=>{
+		let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts/' + pID  + '?_embed';
+		Axios.get(url).then((res)=>{
 			setpDeatils(res.data)
 		});
 	
 	}, []);
-	console.log(pDeatils);
-	let embeddetails = pDeatils._embedded;
+	
 	return (
-		<div className='blogsingle'>
+		<div className='container'>
 			{pDeatils.title.rendered}
 		</div>
 	)

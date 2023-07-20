@@ -5,7 +5,7 @@ import Axios from 'axios';
 const Blogs = () => {
 	const [posts, setPosts] = useState([]);
 	useEffect(()=>{
-		let url = 'http://siteproofs.com/projects/hetal/wp/wp-json/wp/v2/posts?_embed';
+		let url = 'https://chandanbrass.com/wp/wp-json/wp/v2/posts?_embed';
 		Axios.get(url).then((res)=>{
 			setPosts(res.data);
 		});
